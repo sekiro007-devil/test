@@ -1,0 +1,59 @@
+
+body {
+  background-color: #41431B;
+  display: flexbox;
+}
+.inputcreat{
+  display: inline-block;
+  text-align: center;
+  background-color: #E3DBBB;
+  width: 100%;
+  height: 35vh;
+  border-radius: 12px;
+
+}
+input{
+  margin-right: 30px;
+  width: 400px;
+  height: 20px;
+
+}
+.btncreat{
+  margin-top: 15px;
+  width: 120px;
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid rgb(0, 0, 0);
+}
+li{
+  color:#E3DBBB ;
+  font-size: 32px;
+}
+.btndelete{
+ margin-left: 15px;
+  width: 100px;
+  height: 40px;
+  border-radius: 12px;
+  border-color: rgb(255, 255, 255);
+
+}
+.listuser{
+   display: inline-block;
+  text-align: center;
+  width: 100%;
+  height: 35vh;
+  margin-top: 50px;
+}
+td{
+  padding: 8px;
+  border-Bottom: 3px solid  #000000 ; 
+}
+tr{
+  border-Bottom: 3px solid  #000000 ; 
+  background-color:#E3DBBB ;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+  
+}

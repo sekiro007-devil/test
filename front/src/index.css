@@ -1,0 +1,13 @@
+
+body {
+  background-color: #41431B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input creat{
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+
+}
