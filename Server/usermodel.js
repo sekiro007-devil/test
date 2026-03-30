@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 
 
 mongoose.connect('mongodb://localhost:27017/a')
-  .then(() => console.log('✅ تم الاتصال بقاعدة البيانات بنجاح'))
-  .catch(err => console.error('❌ فشل الاتصال بقاعدة البيانات:', err.message));
+  .then(() => console.log(' تم الاتصال بقاعدة البيانات بنجاح'))
+  .catch(err => console.error(' فشل الاتصال بقاعدة البيانات:', err.message));
 
 const userSchema = new mongoose.Schema({
     id:{
