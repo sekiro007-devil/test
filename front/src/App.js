@@ -8,13 +8,13 @@ const [email, setemail] = useState('');
 const [age, setage] = useState('');
  
 
-// Send a GET request to the local server to show users
+
   useEffect(() => {
     Axios.get('http://localhost:3001/users')
       .then(res => {
       setUsers(res.data)
   })}, [users]);
-// Send a post request to the local server to creact user
+
 const creatuser=()=>{
       Axios.post('http://localhost:3001/users/creatuser',{
         name: names,
@@ -23,7 +23,6 @@ const creatuser=()=>{
       })
 
 };
-// Send a delete request to the local server to delete user
 const deleteUser = async (id) => {
   await Axios.delete(`http://localhost:3001/users/deleteuser/${id}`);
   setUsers(users.filter(u => u._id !== id));
@@ -49,7 +48,7 @@ const deleteUser = async (id) => {
       <th style={{ padding: '10px' }}>الاسم</th>
       <th style={{ padding: '10px' }}>العمر</th>
       <th style={{ padding: '10px' }}>إيميل</th>
-      <th style={{ padding: '10px' }}>الإجراء</th>
+      <th style={{ padding: '10px' }}>الإجراءات</th>
     </tr>
   </thead>
   <tbody>

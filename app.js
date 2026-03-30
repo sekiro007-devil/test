@@ -1,9 +1,8 @@
-//modules
 const express = require('express')
 const cors = require('cors')
 const app = express()
 const mongooes = require('mongoose')
-const userSchema = require('./Server/usermodel')
+const usersf = require('./Server/usermodel')
 mongooes.connect('mongodb://localhost:27017/a')
 app.use(cors());
 app.use(express.json());
@@ -11,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 // show users 
 app.get('/users', async (req, res) => {
    
-    const users = await userSchema.find();
+    const users = await usersf.find();
 
     res.json(users);
   });  
@@ -21,7 +20,7 @@ app.post('/users/creatuser', async (req, res) => {
   const { name, email, age } = req.body;
   
   if (name && email && age) {
-    const newuser = new userSchema(req.body);
+    const newuser = new usersf(req.body);
     await newuser.save();
     res.json(newuser);
   } 
@@ -29,7 +28,7 @@ app.post('/users/creatuser', async (req, res) => {
 
 // delete user
 app.delete('/users/deleteuser/:id', async (req, res) => {
-  const user = await userSchema.findByIdAndDelete(req.params.id);
+  const user = await usersf.findByIdAndDelete(req.params.id);
   user ? res.json({ success: true }) : res.status(404).json({ error: 'غير موجود' });
 });
 // creat local host port 3001 
